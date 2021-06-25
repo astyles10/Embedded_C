@@ -3,3 +3,5 @@ https://arm-software.github.io/CMSIS_5/Core/html/using_pg.html
 https://www.st.com/en/evaluation-tools/stm32f4discovery.html#documentation
 https://sites.google.com/site/johnkneenmicrocontrollers/input_output/io_f407
 https://github.com/MaJerle/stm32fxxx-hal-libraries
+
+https://stackoverflow.com/questions/59546305/stm32f103-gpio-ports
