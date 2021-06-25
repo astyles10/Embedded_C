@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.setup": "json",
+			"stm32f4xx.h": "c"
+		}
+	}
+}
