@@ -1,11 +1,20 @@
 #include "./Includes/stm32f4xx.h"
 
 int main (void) {
+
+  // Configure AHB/APB1/APB2 Clocks
   RCC->CR |= 1 << 16; // Turn HSE on
-  RCC->CFGR = 0x0000001;
-  RCC->AHB1ENR |= 1 << 3; // Turn on GPIO D
-  GPIOD->MODER |= 0x01000000; // Set pin 12 to output
-  GPIOD->MODER |= 0x04000000; // Set pin 13 to output
-  GPIOD->MODER |= 0x10000000; // Set pin 14 to output
-  GPIOD->MODER |= 0x40000000; // Set pin 15 to output
+  while (!(RCC->CR & (1 << 17))); // Wait for HSE ready
+  RCC->CFGR = 0x0000001; // Set HSE as SYSCLK
+
+  // Enable clock to the peripheral devices
+  RCC->AHB1ENR |= RCC_AHB1ENR_GPIODEN;
+
+  // Configure GPIOx registers
+  GPIOD->MODER |= (1 << 26); // Set pin 13 to output
+
+
+  while (1) {
+    GPIOD->ODR ^= (1 << 13);
+  }
 }
