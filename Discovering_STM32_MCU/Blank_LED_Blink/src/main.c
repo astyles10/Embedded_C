@@ -1,4 +1,5 @@
-#include "./Includes/stm32f4xx.h"
+#include "stm32f4xx_conf.h"
+#define STM32F40XX
 
 int main (void) {
 
@@ -13,8 +14,7 @@ int main (void) {
   // Configure GPIOx registers
   GPIOD->MODER |= (1 << 26); // Set pin 13 to output
 
-
   while (1) {
-    GPIOD->ODR ^= (1 << 13);
+    GPIOD->ODR |= (1 << 13);
   }
 }
