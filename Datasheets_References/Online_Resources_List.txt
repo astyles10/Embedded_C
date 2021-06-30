@@ -5,3 +5,5 @@ https://sites.google.com/site/johnkneenmicrocontrollers/input_output/io_f407
 https://github.com/MaJerle/stm32fxxx-hal-libraries
 
 https://stackoverflow.com/questions/59546305/stm32f103-gpio-ports
+http://elm-chan.org/fsw/ff/00index_e.html
+https://jeremyherbert.net/get/stm32f4_getting_started
